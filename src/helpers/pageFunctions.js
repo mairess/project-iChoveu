@@ -117,12 +117,16 @@ export async function handleSearch(event) {
   const searchInput = document.getElementById('search-input');
   const searchValue = searchInput.value;
   const cities = await searchCities(searchValue);
-  if (cities) {
-    const forecastPromises = cities.map(async (city) => {
-      const cityUrl = city.url;
-      return getWeatherByCity(cityUrl);
-    });
-    const forecast = await Promise.all(forecastPromises);
-    return forecast;
+  try {
+    if (cities) {
+      const forecastPromises = cities.map(async (city) => {
+        const cityUrl = city.url;
+        return getWeatherByCity(cityUrl);
+      });
+      const forecast = await Promise.all(forecastPromises);
+      return forecast;
+    } throw new Error('Erro no request API');
+  } catch (error) {
+    return error.message;
   }
 }
