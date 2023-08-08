@@ -119,11 +119,11 @@ export async function handleSearch(event) {
   const cities = await searchCities(searchValue);
   try {
     if (cities) {
-      const forecastPromises = cities.map(async (city) => {
+      const forecastPromises = cities.map((city) => {
         const cityUrl = city.url;
         return getWeatherByCity(cityUrl);
       });
-      const forecast = await Promise.all(forecastPromises);
+      const forecast = Promise.all(forecastPromises);
       return forecast;
     } throw new Error('Erro no request API');
   } catch (error) {
