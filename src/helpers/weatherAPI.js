@@ -3,14 +3,11 @@
 export const searchCities = async (TERMO_DE_BUSCA) => {
   const erMessage = 'Nenhuma cidade encontrada';
   try {
-    if (!TERMO_DE_BUSCA) {
-      throw new Error(erMessage);
-    }
     const TOKEN = 'd50ff4be4f7f485ea18235637230708';
     const API_URL = `http://api.weatherapi.com/v1/search.json?key=${TOKEN}&q=${TERMO_DE_BUSCA}`;
     const response = await fetch(API_URL);
     const data = await response.json();
-    if (data.length === 0) {
+    if (!TERMO_DE_BUSCA || data.length === 0) {
       throw new Error(erMessage);
     }
     return data;
