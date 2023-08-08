@@ -10,8 +10,7 @@ export const searchCities = async (TERMO_DE_BUSCA) => {
     if (!TERMO_DE_BUSCA || data.length === 0) {
       throw new Error(erMessage);
     }
-    const [city] = data;
-    return city;
+    return data;
   } catch (error) {
     return window.alert(error.message);
   }
