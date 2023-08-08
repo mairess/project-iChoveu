@@ -117,14 +117,21 @@ export async function handleSearch(event) {
   const searchInput = document.getElementById('search-input');
   const searchValue = searchInput.value;
   const cities = await searchCities(searchValue);
+
+  const citiesList = document.getElementById('cities');
+
   try {
     if (cities) {
       const forecastPromises = cities.map((city) => {
         const cityUrl = city.url;
         return getWeatherByCity(cityUrl);
       });
-      const forecast = Promise.all(forecastPromises);
-      return forecast;
+
+      const forecastData = await Promise.all(forecastPromises);
+      forecastData.forEach((cityInfo) => {
+        const cityElement = createCityElement(cityInfo);
+        citiesList.appendChild(cityElement);
+      });
     } throw new Error('Erro no request API');
   } catch (error) {
     return error.message;
