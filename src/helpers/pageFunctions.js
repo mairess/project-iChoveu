@@ -81,11 +81,14 @@ export function createCityElement(cityInfo) {
 
   const cityElement = createElement('li', 'city');
 
+  const seeForecastBtn = createElement('button', 'next-days-forecast', 'Ver previsão');
+
   const headingElement = createElement('div', 'city-heading');
   const nameElement = createElement('h2', 'city-name', name);
   const countryElement = createElement('p', 'city-country', country);
   headingElement.appendChild(nameElement);
   headingElement.appendChild(countryElement);
+  headingElement.appendChild(seeForecastBtn);
 
   const tempElement = createElement('p', 'city-temp', `${temp}º`);
   const conditionElement = createElement('p', 'city-condition', condition);
