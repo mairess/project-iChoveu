@@ -1,4 +1,4 @@
-import { searchCities, getWeatherByCity } from './weatherAPI';
+import { searchCities, getWeatherByCity, getNextSevenDaysForecast } from './weatherAPI';
 
 /**
  * Cria um elemento HTML com as informações passadas
@@ -82,6 +82,14 @@ export function createCityElement(cityInfo) {
   const cityElement = createElement('li', 'city');
 
   const seeForecastBtn = createElement('button', 'next-days-forecast', 'Ver previsão');
+  seeForecastBtn.addEventListener('click', async () => {
+    try {
+      const forecastList = await getNextSevenDaysForecast(condition);
+      showForecast(forecastList);
+    } catch (error) {
+      // console.log(error);
+    }
+  });
 
   const headingElement = createElement('div', 'city-heading');
   const nameElement = createElement('h2', 'city-name', name);
