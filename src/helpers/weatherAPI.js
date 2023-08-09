@@ -16,19 +16,19 @@ export const searchCities = async (TERMO_DE_BUSCA) => {
   }
 };
 
-export const getWeatherByCity = async (URL_CIDADE) => {
+export const getWeatherByCity = async (url) => {
   try {
-    if (!URL_CIDADE) {
+    if (!url) {
       throw new Error(`Requesting error: ${erMessage}`);
     }
-    const API_CITY_URL = `http://api.weatherapi.com/v1/current.json?lang=pt&key=${TOKEN}&q=${URL_CIDADE}`;
+    const API_CITY_URL = `http://api.weatherapi.com/v1/current.json?lang=pt&key=${TOKEN}&q=${url}`;
     const response = await fetch(API_CITY_URL);
     const data = await response.json();
     const { location, current } = data;
     const { temp_c: temp, condition: cityCondition } = current;
     const { name, country } = location;
     const { text: condition, icon } = cityCondition;
-    return { name, country, temp, condition, icon };
+    return { name, country, temp, condition, icon, url };
   } catch (error) {
     return window.alert(error.message);
   }

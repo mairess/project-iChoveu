@@ -77,18 +77,15 @@ export function showForecast(forecastList) {
  * Recebe um objeto com as informações de uma cidade e retorna um elemento HTML
  */
 
-let auxToGetUrlFrimCities = '';
-
 export function createCityElement(cityInfo) {
-  const { name, country, temp, condition, icon /* , url */ } = cityInfo;
-  console.log(cityInfo);
+  const { name, country, temp, condition, icon, url } = cityInfo;
 
   const cityElement = createElement('li', 'city');
 
   const seeForecastBtn = createElement('button', 'next-days-forecast', 'Ver previsão');
   seeForecastBtn.addEventListener('click', async () => {
     try {
-      const forecastList = await getNextSevenDaysForecast(auxToGetUrlFrimCities); // não entendii
+      const forecastList = await getNextSevenDaysForecast(url);
       showForecast(forecastList);
     } catch (error) {
       // console.log(error);
@@ -139,7 +136,6 @@ export async function handleSearch(event) {
     if (cities) {
       const forecastPromises = cities.map((city) => {
         const cityUrl = city.url;
-        auxToGetUrlFrimCities = city.url;
         return getWeatherByCity(cityUrl);
       });
 
