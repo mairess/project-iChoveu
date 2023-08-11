@@ -82,7 +82,7 @@ export function createCityElement(cityInfo) {
 
   const cityElement = createElement('li', 'city');
 
-  const seeForecastBtn = createElement('button', 'next-days-forecast', 'Ver previsão');
+  const seeForecastBtn = createElement('button', 'city-forecast-button', 'Ver previsão');
   seeForecastBtn.addEventListener('click', async () => {
     try {
       const forecastList = await getNextSevenDaysForecast(url);
@@ -115,6 +115,7 @@ export function createCityElement(cityInfo) {
 
   cityElement.appendChild(headingElement);
   cityElement.appendChild(infoContainer);
+  cityElement.appendChild(seeForecastBtn);
 
   return cityElement;
 }
