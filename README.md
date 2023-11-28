@@ -1,4 +1,4 @@
-# <p align="center">Projeto Lessons Learned</p>
+# <p align="center">Projeto iChoveu</p>
 
 ## Contexto
 
