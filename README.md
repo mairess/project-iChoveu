@@ -1,10 +1,10 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# <p align="center">Projeto Lessons Learned</p>
+
+## Contexto
+
+Esse projeto é um site de previsão do tempo, ele já tem sua estilização pronta, bem como o html. O objetivo é consumir os dados de uma API, compreendendo o concieto assincronicidade em JavaScriptas e desenvolver as funções que estão em `src/helpers/`.
+
+## Competências desenvolvidas
+
+- Compreensão de promises e fetch.
+- Compreensão de async e await.
