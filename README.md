@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Esse projeto é um site simples de previsão do tempo, `ele já tem sua estilização pronta`, bem como o `html`. O objetivo é consumir os dados de uma API, a [Weather API](https://www.weatherapi.com/), compreender o conceito assincronicidade em JavaScript e desenvolver as funções que estão em `src/helpers/`.
+Esse projeto é um site simples de previsão do tempo, `ele já tem sua estilização pronta`, bem como uma parte do código. O objetivo é consumir os dados de uma API, a [Weather API](https://www.weatherapi.com/), compreender o conceito assincronicidade em JavaScript e desenvolver as funções que estão em `src/helpers/`.
 
 ## Rode o projeto localmente
 
