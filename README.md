@@ -9,7 +9,7 @@ Esse projeto é um site simples de previsão do tempo, `ele já tem sua estiliza
 <summary><strong>Rode o projeto localmente</strong></summary><br>
 
 > ⚠️ É preciso ter o [Node](https://nodejs.org/en) instalado em sua máquina.
-
+>
 > ⚠️ É preciso ter uma `API Key`.
 
 <details> <br>
@@ -22,11 +22,8 @@ Esse projeto é um site simples de previsão do tempo, `ele já tem sua estiliza
 
 </details>
 
-⚠️ Crie um arquivo`.env` na raiz do projeto e cole a sua chave. Na raiz desse projeto há um exemplo `.env.example` veja:
+⚠️ Crie um arquivo`.env` na raiz do projeto e cole a sua chave. Na raiz desse projeto há um exemplo [.env.example](./.env.example)
 
-```Typescript
-VITE_TOKEN=paste_your_API_KEY_here
-```
 
 Clone o repositório:
 
