@@ -27,19 +27,19 @@ Esse projeto é um site simples de previsão do tempo, `ele já tem sua estiliza
 
 Clone o repositório:
 
-```JSON
+```SHELL
 git clone git@github.com:mairess/project-iChoveu.git
 ```
 
 Instale as dependências:
 
-```JSON
+```SHELL
 npm install
 ```
 
 Inicie o vite server:
 
-```JSON
+```SHELL
 npm run dev
 ```
 
@@ -53,13 +53,13 @@ npm run dev
 
 Clone o repositório:
 
-```JSON
+```SHELL
 git clone git@github.com:mairess/project-iChoveu.git
 ```
 
 Suba o container:
 
-```JSON
+```SHELL
 docker compose up -d
 ```
 
